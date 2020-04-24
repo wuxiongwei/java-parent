@@ -229,9 +229,7 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         return child;
     }
 
-    // Sometimes the left or right child node of a parent changes and the
-    // parent's reference needs to be updated to point to the new child.
-    // This is a helper method to do just that.
+//    有时，父节点的左侧或右侧子节点发生更改，需要更新父节点的引用以指向新子节点。
     private void updateParentChildLink(Node parent, Node oldChild, Node newChild) {
         if (parent != null) {
             if (parent.left == oldChild) {
@@ -242,19 +240,19 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         }
     }
 
-    // Helper method to find the leftmost node (which has the smallest value)
+    //帮助程序方法查找最左侧的节点（具有最小值）*
     private Node findMin(Node node) {
         while (node.left != null) node = node.left;
         return node;
     }
 
-    // Helper method to find the rightmost node (which has the largest value)
+    //帮助程序方法查找最右侧的节点（具有最大值）*
     private Node findMax(Node node) {
         while (node.right != null) node = node.right;
         return node;
     }
 
-    // Returns as iterator to traverse the tree in order.
+    // 返回迭代器以按顺序遍历树。
     @Override
     public java.util.Iterator<T> iterator() {
 
@@ -298,7 +296,6 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
         };
     }
 
-    // Example usage of RB tree:
     public static void main(String[] args) {
 
         int[] values = {5, 8, 1, -4, 6, -2, 0, 7};
