@@ -13,6 +13,7 @@
         <module>how-to-use-java</module>
         <module>how-to-use-swagger</module>
         <module>common-lang</module>
+        <module>how-to-use-k8s</module>
     </modules>
 
     <build>
